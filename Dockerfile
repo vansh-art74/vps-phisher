@@ -9,7 +9,6 @@ RUN git clone https://github.com /app
 WORKDIR /app
 RUN pip3 install -r requirements.txt --break-system-packages
 
-# Render ko fake port dikhane ke liye taaki deploy fail na ho
 EXPOSE 8080
 
-CMD python3 maxphisher.py --noupdate
+CMD ["tail", "-f", "/dev/null"]
